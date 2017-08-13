@@ -23,7 +23,7 @@ class Object:
 	"""
 	
 	def __init__(self, id):
-		self.id = id
+		self.id = int(id)
 		
 	def __eq__(self, other):
 		return isinstance(other, self.__class__) and other.id == self.id
