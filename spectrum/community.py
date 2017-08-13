@@ -40,7 +40,8 @@ class Community(Object):
 	"""
 	
 	__slots__ = [
-				'id', 'type'
+				'id', 'type', 'slug', 'name', 'avatar', 'banner', lobbies',
+				'roles'
 				]
 				
 	def __init__(self, **kwargs):
