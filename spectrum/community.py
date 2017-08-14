@@ -13,7 +13,7 @@ class Community(Object):
     +-----------+--------------------------------------------+
     | x != y    | Checks if two communities' are not equal.  |
     +-----------+--------------------------------------------+
-    | str(x)    | Returns the communities' name.            |
+    | str(x)    | Returns the communities' name.             |
     +-----------+--------------------------------------------+
     
     Attributes
