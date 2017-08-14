@@ -4,6 +4,7 @@ An attempt to make an API wrapper for Robert Space Industries' Spectrum chat
 # Rules/Goals
 * 100% Asynchronous using the built-in asyncio package
 * Fully documented *no matter what*
+* Tabs only for indentation. No exceptions. Even for my very good internet friend, Vacaton#3890.
 * ???
 
 ## Task that need to be done
