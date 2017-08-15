@@ -39,7 +39,7 @@ class Community(Object):
     """
     
     __slots__ = [
-                'id', 'type', 'slug', 'name', 'avatar', 'banner', 'lobbies',
+                'id', 'type', 'slug', 'name', 'avatar', 'banner', '_lobbies',
                 'roles'
                 ]
                 
