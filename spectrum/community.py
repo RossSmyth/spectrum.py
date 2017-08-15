@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from .object import Object
+from .lobby import Lobby
 
 class Community(Object):
     """Represents a Spectrum Community
@@ -31,8 +32,8 @@ class Community(Object):
         This is a URL for the avatar of the community
     banner : str
         This is a URL for the banner of the community
-    lobbies : NotImplemented
-        A list of :class:`Lobby` that the community has. #TODO
+    lobbies :
+        An iterable :class:`Lobby` that the community has.
     roles : NotImplemented
         A list of the :class:`Role` that the community has. #TODO
     """
@@ -50,10 +51,18 @@ class Community(Object):
         self.name = kwargs.pop('name')
         self.avatar = kwargs.pop('avatar')
         self.banner = kwargs.pop('banner')
-        
-        self.lobbies = [NotImplemented]  # TODO
-        
+
+        self._lobbies = {}  # allows for easy lookup of lobbies by ID number
+        _lobbies_json = kwargs.pop('lobbies')
+        for l in _lobbies_json:
+            lobby = Lobby(community=self, **l)
+            self._lobbies[lobby.id] = lobby
+
         self.roles = [NotImplemented]  # TODO
+
+    @property
+    def lobbies(self):
+        return self._lobbies.values()
         
     def __str__(self):
         return self.name
