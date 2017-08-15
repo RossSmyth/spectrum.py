@@ -40,3 +40,8 @@ Lobby
 ~~~~~~
 .. autoclass:: Lobby
     :members:
+
+Member
+~~~~~~~
+.. autoclass:: Member
+    :members:

@@ -18,6 +18,7 @@ from .object import Object
 from .community import Community
 from .message import Message
 from .lobby import Lobby
+from .member import Member
 from collections import namedtuple
 
 VersionInfo = namedtuple('VersionInfo', 'major minor micro releaselevel serial')
