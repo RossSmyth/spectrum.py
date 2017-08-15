@@ -2,6 +2,7 @@
 from .object import Object
 from .lobby import Lobby
 
+
 class Community(Object):
     """Represents a Spectrum Community
     
@@ -37,15 +38,15 @@ class Community(Object):
     roles : NotImplemented
         A list of the :class:`Role` that the community has. #TODO
     """
-    
+
     __slots__ = [
                 'id', 'type', 'slug', 'name', 'avatar', 'banner', '_lobbies',
                 'roles'
                 ]
-                
+
     def __init__(self, **kwargs):
         super(Community, self).__init__(kwargs.pop('id'))
-        
+
         self.type = kwargs.pop('type')
         self.slug = kwargs.pop('slug')
         self.name = kwargs.pop('name')
@@ -63,6 +64,6 @@ class Community(Object):
     @property
     def lobbies(self):
         return self._lobbies.values()
-        
+
     def __str__(self):
         return self.name

@@ -19,7 +19,7 @@ class Message(Object):
     +-----------+-----------------------------------------+
 
     id : int
-        The ID of the community
+        The ID of the Message
     time_created : datetime.datetime.utcfromtimestamp
         The time that the message was created at
     time_modified : datetime.datetime.utcfromtimestamp
@@ -44,9 +44,9 @@ class Message(Object):
     """
 
     __slots__ = [
-        'id', 'time_created', 'time_modified', 'lobby', 'author',
-        'content', 'media_id', 'highlight_role_id', 'reactions',
-    ]
+                'id', 'time_created', 'time_modified', 'lobby', 'author',
+                 'content', 'media_id', 'highlight_role_id', 'reactions',
+                ]
 
     def __init__(self, **kwargs):
         super(Message, self).__init__(kwargs.pop('id'))
