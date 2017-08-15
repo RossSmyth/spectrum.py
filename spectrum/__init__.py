@@ -17,6 +17,7 @@ __version__ = '0.01'
 from .object import Object
 from .community import Community
 from .message import Message
+from .lobby import Lobby
 from collections import namedtuple
 
 VersionInfo = namedtuple('VersionInfo', 'major minor micro releaselevel serial')
