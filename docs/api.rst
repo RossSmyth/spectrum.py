@@ -35,3 +35,8 @@ Community
 ~~~~~~~~~~
 .. autoclass:: Community
     :members:
+
+Lobby
+~~~~~~
+.. autoclass:: Lobby
+    :members:
