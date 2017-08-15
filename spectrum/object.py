@@ -17,8 +17,6 @@ class Object:
     This is the class that will be the base class of most objects, since most 
     have an ID number. 
     
-    Attributes
-    ----------
     id : int
         The ID of the object
     """

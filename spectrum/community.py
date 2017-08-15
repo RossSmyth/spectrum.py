@@ -15,16 +15,14 @@ class Community(Object):
     +-----------+--------------------------------------------+
     | str(x)    | Returns the communities' name.             |
     +-----------+--------------------------------------------+
-    
-    Attributes
-    ----------
+
     id : int
         The ID of the community
     type : str
         The type of community. It can either be public or private.
         As far as I can tell, Public are CIG managed communities
-        (not sure if evocati or subscriber communites are since I am not one)
-        and private are orginizations.
+        (not sure if evocati or subscriber communities are since I am not one)
+        and private are organizations.
     slug : str
         The shorthand abbreviation of the community
     name : str

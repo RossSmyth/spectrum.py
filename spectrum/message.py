@@ -17,9 +17,7 @@ class Message(Object):
     +-----------+-----------------------------------------+
     | str(x)    | Returns the messages' content. TODO     |
     +-----------+-----------------------------------------+
-    
-    Attributes
-    ----------
+
     id : int
         The ID of the community
     time_created : datetime.datetime.utcfromtimestamp
