@@ -3,7 +3,7 @@
 """
 Spectrum API Wrapper
 ~~~~~~~~~~~~~~~~~~~
-A basic wrapper for the Spectrum API.
+A wrapper for the Spectrum API.
 :copyright: (c) 2017 treefroog
 :license: MIT, see LICENSE for more details.
 """

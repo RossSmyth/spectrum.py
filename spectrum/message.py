@@ -26,12 +26,15 @@ class Message(Object):
         The time that the message was modified. NOTE: May be the same as the
         time that it was created. This just means it has not been modified. 
         Maybe changed in the future.
-    lobby : NotImplemented
-        The lobby that the message was sent in. TODO
+    lobby : :class:`Lobby`
+        The lobby that the message was sent in. I know the general plan of how
+        to execute this, but since a lobby object isn't sent with the message
+        (which makes sense) I will have to pull it from the cache when the
+        message is sent. I have it in my head of how it will work. # TODO
     author : NotImplemented
         The author of the message. The API calls it "member." TODO
     content : NotImplemented
-        The content of the message. Acutally complicated. TODO
+        The content of the message. Actually complicated. TODO
     media_id : NotImplemented
         I do not know what this is, but it is in the API. TODO
     highlight_role_id : NotImplemented
@@ -53,7 +56,7 @@ class Message(Object):
         self.time_modified = datetime.utcfromtimestamp(
             kwargs.pop('time_modified'))
 
-        self.lobby = NotImplemented
+        self.lobby = kwargs.pop('lobby')  # TODO
         self.author = NotImplemented
         self.content = NotImplemented
         self.media_id = NotImplemented
