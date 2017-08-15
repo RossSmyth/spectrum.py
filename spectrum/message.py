@@ -15,7 +15,7 @@ class Message(Object):
     +-----------+-----------------------------------------+
     | x != y    | Checks if two messages' are not equal.  |
     +-----------+-----------------------------------------+
-    | str(x)    | Returns the messages' content. TODO     |
+    | str(x)    | Returns the message's content. TODO     |
     +-----------+-----------------------------------------+
 
     id : int
