@@ -19,6 +19,8 @@
 #
 import os
 import sys
+import re
+
 sys.path.insert(0, os.path.abspath('..'))
 
 
@@ -55,8 +57,10 @@ author = 'treefroog'
 # built documents.
 #
 # The short X.Y version.
-version = '.01'
-
+version = ''
+with open('../spectrum/__init__.py') as f:
+    version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(),
+                        re.MULTILINE).group(1)
 # The full version, including alpha/beta/rc tags.
 release = version
 
