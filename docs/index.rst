@@ -5,7 +5,7 @@
 
 Welcome to spectrum.py's documentation!
 =======================================
-You can join the Spectrum API community at `This Discord Server <https://discordapp.com/invite/QaSKRvF>`
+You can join the Spectrum API community at `This Discord Server <https://discordapp.com/invite/QaSKRvF>`_
 
 .. toctree::
    :maxdepth: 2
