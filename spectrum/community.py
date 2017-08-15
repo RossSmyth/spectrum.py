@@ -31,10 +31,10 @@ class Community(Object):
         This is a URL for the avatar of the community
     banner : str
         This is a URL for the banner of the community
-    lobbies : list
-        A list of :class:`Lobby` that the community has. NOT IMPLEMENTED
-    roles : list
-        A list of the :class:`Role` that the community has. NOT IMPLEMENTED
+    lobbies : NotImplemented
+        A list of :class:`Lobby` that the community has. #TODO
+    roles : NotImplemented
+        A list of the :class:`Role` that the community has. #TODO
     """
     
     __slots__ = [
@@ -51,9 +51,9 @@ class Community(Object):
         self.avatar = kwargs.pop('avatar')
         self.banner = kwargs.pop('banner')
         
-        self.lobbies = ['TODO'] #TODO
+        self.lobbies = [NotImplemented]  # TODO
         
-        self.roles = ['TODO'] #TODO
+        self.roles = [NotImplemented]  # TODO
         
     def __str__(self):
         return self.name
