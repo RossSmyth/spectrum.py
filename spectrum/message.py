@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from .object import Object
+from .member import Member
 from datetime import datetime
 
 
@@ -31,8 +32,9 @@ class Message(Object):
         to execute this, but since a lobby object isn't sent with the message
         (which makes sense) I will have to pull it from the cache when the
         message is sent. I have it in my head of how it will work. # TODO
-    author : NotImplemented
-        The author of the message. The API calls it "member." TODO
+    author : :class:`Member`
+        The author of the message. While this is a Member object, it is called
+        author because it make more sense in context.
     content : NotImplemented
         The content of the message. Actually complicated. TODO
     media_id : NotImplemented
@@ -57,7 +59,13 @@ class Message(Object):
             kwargs.pop('time_modified'))
 
         self.lobby = kwargs.pop('lobby')  # TODO
-        self.author = NotImplemented
+
+        # This checks to see if networking found the author object in the cache
+        if isinstance(kwargs['member'], Member):  # TODO
+            self.author = kwargs.pop('member')
+        else:
+            self.author = Member(**kwargs.pop('member'))
+
         self.content = NotImplemented
         self.media_id = NotImplemented
         self.highlight_role_id = NotImplemented
