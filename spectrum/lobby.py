@@ -43,7 +43,7 @@ class Lobby(Object):
                 'online_members_count', 'key', 'permissions', 'community'
                 ]
 
-    def __init_subclass__(self, **kwargs):
+    def __init__(self, **kwargs):
         super(Lobby, self).__init__(kwargs.pop('id'))
 
         self.type = kwargs.pop('type')
