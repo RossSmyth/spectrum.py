@@ -14,7 +14,7 @@ class Object:
     | x != y    | Checks if two objects are not equal. |
     +-----------+--------------------------------------+
     
-    This is the class that will be the base class of most objects, since most 
+    This class is the base class of most objects, since most
     have an ID number. 
     
     id : int
