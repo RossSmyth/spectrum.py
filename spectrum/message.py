@@ -58,10 +58,10 @@ class Message(Object):
         self.time_modified = datetime.utcfromtimestamp(
             kwargs.pop('time_modified'))
 
-        self.lobby = kwargs.pop('lobby')  # TODO
+        self.lobby = kwargs.pop('lobby')
 
         # This checks to see if networking found the author object in the cache
-        if isinstance(kwargs['member'], Member):  # TODO
+        if isinstance(kwargs['member'], Member):
             self.author = kwargs.pop('member')
         else:
             self.author = Member(**kwargs.pop('member'))
