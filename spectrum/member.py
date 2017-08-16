@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from .object import Object
+from .presence import Presence
 
 
 class Member(Object):
@@ -14,7 +15,7 @@ class Member(Object):
     +-----------+-----------------------------------------+
     | x != y    | Checks if two members' are not equal.   |
     +-----------+-----------------------------------------+
-    | str(x)    | Returns the member's name. TODO         |
+    | str(x)    | Returns the member's name.              |
     +-----------+-----------------------------------------+
 
     id : int
@@ -25,7 +26,7 @@ class Member(Object):
         The unique identifying name that the member chose
     avatar : str
         URL to the member's avatar
-    presence : NotImplemented
+    presence : :class:`Presence`
         The presence of the member. TODO
     roles : NotImplemented
         The roles held by the member. TODO
@@ -42,7 +43,12 @@ class Member(Object):
         self.handle = kwargs.pop('nickname')
         self.avatar = kwargs.pop('avatar')
 
-        self.presence = NotImplemented  # TODO
+        # allows the presence to be passed from the cache if it already has it
+        if isinstance(kwargs['presence'], Presence):
+            self.presence = kwargs.pop('presence')
+        else:
+            self.presence = Presence(**kwargs.pop('presence'))
+
         self.roles = NotImplemented
 
     def __str__(self):
