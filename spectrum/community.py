@@ -21,10 +21,10 @@ class Community(Object):
     id : int
         The ID of the community
     type : str
-        The type of community. It can either be public or private.
-        As far as I can tell, Public are CIG managed communities
-        (not sure if evocati or subscriber communities are since I am not one)
-        and private are organizations.
+        The type of community.
+        Can be one of the following: (to my knowledge)
+            - Public
+            - Private
     slug : str
         The shorthand abbreviation of the community
     name : str
