@@ -21,9 +21,9 @@ class Message(Object):
 
     id : int
         The ID of the Message
-    time_created : datetime.datetime.utcfromtimestamp
+    time_created : ``datetime.datetime``
         The time that the message was created at
-    time_modified : datetime.datetime.utcfromtimestamp
+    time_modified : ``datetime.datetime``
         The time that the message was modified. NOTE: May be the same as the
         time that it was created. This just means it has not been modified. 
         Maybe changed in the future.
