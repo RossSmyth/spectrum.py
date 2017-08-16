@@ -27,7 +27,7 @@ class Member(Object):
     avatar : str
         URL to the member's avatar
     presence : :class:`Presence`
-        The presence of the member. TODO
+        The presence of the member.
     roles : NotImplemented
         The roles held by the member. TODO
     """
