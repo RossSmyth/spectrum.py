@@ -45,3 +45,8 @@ Member
 ~~~~~~~
 .. autoclass:: Member
     :members:
+
+Presence
+~~~~~~~~~
+.. autoclass:: Presence
+    :members:
