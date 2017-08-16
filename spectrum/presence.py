@@ -18,6 +18,8 @@ class Presence:
          Can be one of the following:
             - away
             - online
+            - do_not_disturb
+            - invisible
 
     info : str/None
         Returns a string of what the member is doing.
