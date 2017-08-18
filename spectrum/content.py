@@ -25,6 +25,10 @@ class Content:
         A ``list`` of :class:`Mention` objects that make up the Content object
     """
 
+    __slots__ = [
+                'lines', 'blocks', 'raw_content', 'emojis', 'mentions'
+                ]
+
     def __init__(self, **kwargs):
 
         self.lines = len(kwargs['blocks'])
