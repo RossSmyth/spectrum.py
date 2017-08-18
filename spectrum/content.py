@@ -18,7 +18,7 @@ class Content:
         A ``list`` of :class:`Block` objects that makes up the Content object
     raw_content : NotImplemented
         The raw content data of the message without any emojis or mentions put
-         in.
+        in.
     emojis : NotImplemented
         A ``list`` of :class:`Emoji` objects that make up the Content object
     mentions : NotImplemented
