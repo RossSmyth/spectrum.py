@@ -1,6 +1,10 @@
 # spectrum.py
 An attempt to make an API wrapper for Robert Space Industries' Spectrum chat
 
+[Documentation for this wrapper is here][doc]
+
+[doc]: http://spectrumpy.readthedocs.io/en/latest/
+
 # Rules/Goals
 * 100% Asynchronous using the built-in asyncio package
 * Fully documented *no matter what*
