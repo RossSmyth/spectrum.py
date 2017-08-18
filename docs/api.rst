@@ -50,3 +50,8 @@ Presence
 ~~~~~~~~~
 .. autoclass:: Presence
     :members:
+
+Content
+~~~~~~~~
+.. autoclass:: Content
+    :members:
