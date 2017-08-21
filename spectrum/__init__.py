@@ -21,8 +21,11 @@ from .lobby import Lobby
 from .member import Member
 from .presence import Presence
 from .content import Content
+from .style_range import Style_range
+from .entities import Emoji, Link, Mention
 from collections import namedtuple
 
 VersionInfo = namedtuple('VersionInfo', 'major minor micro releaselevel serial')
 
-version_info = VersionInfo(major=0, minor=0, micro=1, releaselevel='alpha', serial=0)
+version_info = VersionInfo(major=0, minor=0, micro=1,
+                           releaselevel='alpha', serial=0)

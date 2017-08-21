@@ -55,3 +55,18 @@ Content
 ~~~~~~~~
 .. autoclass:: Content
     :members:
+
+Emoji
+~~~~~~
+.. autoclass:: Emoji
+    :members:
+
+Link
+~~~~~
+.. autoclass:: Link
+    :members:
+
+Mention
+~~~~~~~~
+.. autoclass:: Mention
+    :members:
