@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from .member import Member
 
+
 class Emoji:
     """Represents a Spectrum Emoji object
 
@@ -64,10 +65,10 @@ class Mention:
         This attribute represents the member that the mention mentions if they
         are in the client's cache. If not it defaults to ``None``
     offset : int
-        The offset of where the emoji resides within the block.
+        The offset of where the mention resides within the block.
     length : int
-        The length of string that the emoji takes up from the offset in the raw
-        block content.
+        The length of string that the mention takes up from the offset in the
+        raw block content.
     """
 
     __slots__ = [
@@ -86,3 +87,41 @@ class Mention:
             return self.user_id
         else:
             return self.member.name
+
+
+class Link:
+    """Represents a Spectrum Link object
+
+    Supported Operations:
+
+    +-----------+-----------------------------------------+
+    | Operation |              Description                |
+    +===========+=========================================+
+    | str(x)    | Returns the link's url.                 |
+    +-----------+-----------------------------------------+
+
+    mutability : str
+        Displays the mutability of the link. I do not know what this means in
+        context, or when they are ever mutable. I have an open prize of 3 free
+        original tapirs to anyone who can solve this.
+    url : str
+        The url that the link object represents.
+    offset : int
+        The offset of where the link resides within the block.
+    length : int
+        The length of string that the link takes up from the offset in the raw
+        block content.
+    """
+
+    __slots__ = [
+                'mutability', 'url', 'offset', 'length',
+    ]
+
+    def __init__(self, **kwargs):
+        self.mutability = kwargs.pop('mutability')
+        self.url = kwargs.pop('data').pop('href')
+        self.offset = kwargs.pop('offset')
+        self.length = kwargs.pop('length')
+
+    def __str__(self):
+        return self.url
