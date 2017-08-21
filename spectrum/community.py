@@ -4,7 +4,7 @@ from .lobby import Lobby
 
 
 class Community(Object):
-    """Represents a Spectrum Community
+    """Represents a Spectrum Community object
     
     Supported Operations:
     

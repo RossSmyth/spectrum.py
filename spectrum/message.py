@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 class Message(Object):
-    """Represents a Spectrum message
+    """Represents a Spectrum message object
     
     Supported Operations:
     

@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 class Presence:
-    """Represents a Spectrum Presence
+    """Represents a Spectrum Presence object
 
     Supported Operations:
 

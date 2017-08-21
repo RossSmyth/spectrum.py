@@ -3,7 +3,7 @@ from .object import Object
 
 
 class Lobby(Object):
-    """Represents a Spectrum lobby
+    """Represents a Spectrum lobby object
 
     Supported Operations:
 
