@@ -38,7 +38,8 @@ class Message(Object):
     content : NotImplemented
         The content of the message. Actually complicated. TODO
     media_id : NotImplemented
-        I do not know what this is, but it is in the API. TODO
+        This is in the format of embed:<embed ID here>. It shows the embed ID
+        if the message has an embed. Can be ``None`` if there are no embeds
     highlight_role_id : NotImplemented
         Again, do not know what this is, but it is in the API. TODO
     reactions : NotImplemented
@@ -67,7 +68,7 @@ class Message(Object):
             self.author = Member(**kwargs.pop('member'))
 
         self.content = NotImplemented
-        self.media_id = NotImplemented
+        self.media_id = kwargs.pop('media_id')
         self.highlight_role_id = NotImplemented
         self.reactions = NotImplemented
 
