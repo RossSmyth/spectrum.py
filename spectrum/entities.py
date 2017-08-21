@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+from .member import Member
 
 class Emoji:
     """Represents a Spectrum Emoji object
@@ -82,7 +82,7 @@ class Mention:
         self.length = kwargs.pop('length')
 
     def __str__(self):
-        if self.member is None:
+        if self.member is None and not isinstance(self.member, Member):
             return self.user_id
         else:
             return self.member.name
