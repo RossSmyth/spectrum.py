@@ -27,7 +27,7 @@ class Content:
 
     __slots__ = [
                 'lines', 'blocks', 'raw_content', 'emojis', 'mentions'
-                ]
+    ]
 
     def __init__(self, **kwargs):
 

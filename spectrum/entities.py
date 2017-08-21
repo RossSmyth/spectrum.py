@@ -31,7 +31,7 @@ class Emoji:
 
     __slots__ = [
                 'mutability', 'emoji', 'offset', 'length',
-                ]
+    ]
 
     def __init__(self, **kwargs):
         self.mutability = kwargs.pop('mutability')
@@ -72,7 +72,7 @@ class Mention:
 
     __slots__ = [
                 'mutability', 'user_id', 'member', 'offset', 'length',
-                ]
+    ]
 
     def __init__(self, member=None, **kwargs):
         self.mutability = kwargs.pop('mutability')

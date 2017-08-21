@@ -24,7 +24,7 @@ class Style_range:
 
     __slots__ = [
                 'style', 'offset', 'length',
-                ]
+    ]
 
     def __init__(self, style = None, offset = None, length = None):
         self.style = style

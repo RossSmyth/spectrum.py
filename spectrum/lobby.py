@@ -41,7 +41,7 @@ class Lobby(Object):
     __slots__ = [
                 'id', 'type', 'name', 'description', 'color',
                 'online_members_count', 'key', 'permissions', 'community'
-                ]
+    ]
 
     def __init__(self, **kwargs):
         super(Lobby, self).__init__(kwargs.pop('id'))

@@ -33,7 +33,7 @@ class Presence:
 
     __slots__ = [
                 'status', 'info', 'since',
-                ]
+    ]
 
     def __init__(self, **kwargs):
 

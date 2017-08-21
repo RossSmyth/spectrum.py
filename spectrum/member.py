@@ -34,7 +34,7 @@ class Member(Object):
 
     __slots__ = [
                 'id', 'name', 'handle', 'avatar', 'presence', 'roles',
-                ]
+    ]
 
     def __init__(self, **kwargs):
         super(Member, self).__init__(kwargs.pop('id'))

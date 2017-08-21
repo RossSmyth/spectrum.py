@@ -42,7 +42,7 @@ class Community(Object):
     __slots__ = [
                 'id', 'type', 'slug', 'name', 'avatar', 'banner', '_lobbies',
                 'roles'
-                ]
+    ]
 
     def __init__(self, **kwargs):
         super(Community, self).__init__(kwargs.pop('id'))
