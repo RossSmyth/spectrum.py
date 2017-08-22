@@ -70,3 +70,8 @@ Mention
 ~~~~~~~~
 .. autoclass:: Mention
     :members:
+
+Block
+~~~~~~
+.. autoclass:: Block
+    :members:

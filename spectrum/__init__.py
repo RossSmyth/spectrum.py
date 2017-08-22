@@ -23,6 +23,7 @@ from .presence import Presence
 from .content import Content
 from .style_range import Style_range
 from .entities import Emoji, Link, Mention
+from .block import Block
 from collections import namedtuple
 
 VersionInfo = namedtuple('VersionInfo', 'major minor micro releaselevel serial')
