@@ -71,6 +71,11 @@ Mention
 .. autoclass:: Mention
     :members:
 
+Style_range
+~~~~~~~~~~~~
+.. autoclass:: Style_range
+    :members:
+
 Block
 ~~~~~~
 .. autoclass:: Block
