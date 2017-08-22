@@ -11,9 +11,9 @@ class Community(Object):
     +-----------+--------------------------------------------+
     | Operation |                Description                 |
     +===========+============================================+
-    | x == y    | Checks if two communities' are equal.      |
+    | x == y    | Checks if two communities are equal.       |
     +-----------+--------------------------------------------+
-    | x != y    | Checks if two communities' are not equal.  |
+    | x != y    | Checks if two communities are not equal.   |
     +-----------+--------------------------------------------+
     | str(x)    | Returns the community's name.              |
     +-----------+--------------------------------------------+

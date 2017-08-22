@@ -6,6 +6,47 @@ from .entities import Emoji, Mention, Link
 
 class Block(Object):
     """Represents a Spectrum block object
+
+    Supported Operations:
+
+    +-----------+--------------------------------------+
+    | Operation |             Description              |
+    +===========+======================================+
+    | x == y    | Checks if two blocks are equal.      |
+    +-----------+--------------------------------------+
+    | x != y    | Checks if two blocks are not equal.  |
+    +-----------+--------------------------------------+
+    | str(x)    | Returns the block's text.            |
+    +-----------+--------------------------------------+
+
+    This object represents each individual line in a Spectrum message. For
+    example if you press Shift+Enter to create a new line, this would be a new
+    block in the message. Also each code block wrapper in ``` would be its own
+    block.
+
+    id : str
+        The ID of the block.
+
+        .. warning::
+
+            Most of the ID attributes for objects in Spectrum are an ``int``,
+            but this ID is a ``str``. I do not know why
+
+    text : str
+        The raw text that makes up the block
+    type : str
+        Represents the type of text in the whole block
+        Can be one of the following:
+            - unstyled
+            - code-block
+            - ???
+    depth : int
+        I do not know what this is. But it is here
+    style_ranges :
+        A ``list`` of :class:`Style_range` that are in the block
+    entities :
+        A ``list`` of either :class:`Emoji`, :class:`Mention`, or :class:`Link`
+        that are in the block's content.
     """
 
     __slots__ = [

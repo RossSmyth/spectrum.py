@@ -10,9 +10,9 @@ class Lobby(Object):
     +-----------+--------------------------------------------+
     | Operation |                Description                 |
     +===========+============================================+
-    | x == y    | Checks if two lobbies' are equal.          |
+    | x == y    | Checks if two lobbies are equal.           |
     +-----------+--------------------------------------------+
-    | x != y    | Checks if two lobbies' are not equal.      |
+    | x != y    | Checks if two lobbies are not equal.       |
     +-----------+--------------------------------------------+
     | str(x)    | Returns the lobbies name.                  |
     +-----------+--------------------------------------------+

@@ -11,9 +11,9 @@ class Member(Object):
     +-----------+-----------------------------------------+
     | Operation |              Description                |
     +===========+=========================================+
-    | x == y    | Checks if two members' are equal.       |
+    | x == y    | Checks if two members are equal.        |
     +-----------+-----------------------------------------+
-    | x != y    | Checks if two members' are not equal.   |
+    | x != y    | Checks if two members are not equal.    |
     +-----------+-----------------------------------------+
     | str(x)    | Returns the member's name.              |
     +-----------+-----------------------------------------+
