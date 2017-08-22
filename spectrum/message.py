@@ -56,6 +56,7 @@ class Message(Object):
 
         self.time_created = datetime.utcfromtimestamp(
             kwargs.pop('time_created'))
+
         self.time_modified = datetime.utcfromtimestamp(
             kwargs.pop('time_modified'))
 

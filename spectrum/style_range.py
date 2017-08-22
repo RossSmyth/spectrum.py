@@ -26,7 +26,7 @@ class Style_range:
                 'style', 'offset', 'length',
     ]
 
-    def __init__(self, style = None, offset = None, length = None):
+    def __init__(self, style=None, offset=None, length=None):
         self.style = style
         self.offset = offset
         self.length = length
