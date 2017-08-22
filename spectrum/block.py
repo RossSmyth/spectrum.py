@@ -39,4 +39,7 @@ class Block(Object):
                 self.entities.append(Mention(**mapped_entity, **entity))
 
             elif mapped_entity['type'].lower() == 'link':
-                self.entities.append(link(**mapped_entity, **entity))
+                self.entities.append(Link(**mapped_entity, **entity))
+
+    def __str__(self):
+        return self.text
