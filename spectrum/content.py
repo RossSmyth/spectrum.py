@@ -20,7 +20,7 @@ class Content:
         Each block represents a line in the message.
     raw_content : str
         The raw content string of the message. Every block (line) ends with a
-        ' \n' before the next block (line) starts.
+        ' \\\\n' before the next block (line) starts.
     """
 
     __slots__ = [
