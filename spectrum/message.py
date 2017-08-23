@@ -40,9 +40,10 @@ class Message(Object):
     media_id : str
         This is in the format of embed:<embed ID here>. It shows the embed ID
         if the message has an embed. Can be ``None`` if there are no embeds
-    highlight_role_id : int
-        The role color that the user uses for this message. I may change to a
-        role object later.
+    highlight_role : int or NotImplemented
+        The role that the member used for that message. It may return an int if
+        the role was not in the clients cache, or it may return a :class:`Role`
+        object if it was in the clients cache.
     reactions : NotImplemented
         The reactions to the message. TODO
     """
@@ -71,7 +72,13 @@ class Message(Object):
 
         self.content = Content(**kwargs.pop('content_state'))
         self.media_id = kwargs.pop('media_id')
-        self.highlight_role_id = int(kwargs.pop('highlight_role_id'))
+
+        # checks if the role object was passed from the cache
+        if isinstance(kwargs['highlight_role_id'], NotImplemented):
+            self.highlight_role = kwargs.pop('highlight_role_id')
+        else:
+            self.highlight_role = int(kwargs.pop('highlight_role_id'))
+
         self.reactions = NotImplemented
 
     def __str__(self):
