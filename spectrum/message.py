@@ -2,7 +2,7 @@
 from .object import Object
 from .member import Member
 from datetime import datetime
-
+from .content import Content
 
 class Message(Object):
     """Represents a Spectrum message object
@@ -35,13 +35,14 @@ class Message(Object):
     author : :class:`Member`
         The author of the message. While this is a Member object, it is called
         author because it make more sense in context.
-    content : NotImplemented
-        The content of the message. Actually complicated. TODO
-    media_id : NotImplemented
+    content : :class:`Content`
+        The content object in the message.
+    media_id : str
         This is in the format of embed:<embed ID here>. It shows the embed ID
         if the message has an embed. Can be ``None`` if there are no embeds
-    highlight_role_id : NotImplemented
-        Again, do not know what this is, but it is in the API. TODO
+    highlight_role_id : int
+        The role color that the user uses for this message. I may change to a
+        role object later.
     reactions : NotImplemented
         The reactions to the message. TODO
     """
@@ -68,9 +69,9 @@ class Message(Object):
         else:
             self.author = Member(**kwargs.pop('member'))
 
-        self.content = NotImplemented
+        self.content = Content(**kwargs.pop('content_state'))
         self.media_id = kwargs.pop('media_id')
-        self.highlight_role_id = NotImplemented
+        self.highlight_role_id = int(kwargs.pop('highlight_role_id'))
         self.reactions = NotImplemented
 
     def __str__(self):
