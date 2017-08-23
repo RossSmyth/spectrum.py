@@ -34,7 +34,7 @@ class Community(Object):
     banner : str
         This is a URL for the banner of the community
     lobbies :
-        An iterable :class:`Lobby` that the community has.
+        An iterator of :class:`Lobby` objects that the community has.
     roles : NotImplemented
         A list of the :class:`Role` that the community has. #TODO
     """
@@ -63,7 +63,7 @@ class Community(Object):
 
     @property
     def lobbies(self):
-        return self._lobbies.values()
+        return iter(self._lobbies.values())  # I guess an iterator will work
 
     def __str__(self):
         return self.name
