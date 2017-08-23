@@ -4,6 +4,7 @@ from .member import Member
 from datetime import datetime
 from .content import Content
 
+
 class Message(Object):
     """Represents a Spectrum message object
     
