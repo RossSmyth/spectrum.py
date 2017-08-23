@@ -82,4 +82,4 @@ class Message(Object):
         self.reactions = NotImplemented
 
     def __str__(self):
-        return self.content  # TODO
+        return self.content.raw_content
