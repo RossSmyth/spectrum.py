@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from .block import Block
 
 
 class Content:
@@ -14,15 +15,12 @@ class Content:
 
     lines : int
         The number of blocks that makes up the Content object
-    blocks : NotImplemented
-        A ``list`` of :class:`Block` objects that makes up the Content object
-    raw_content : NotImplemented
-        The raw content data of the message without any emojis or mentions put
-        in.
-    emojis : NotImplemented
-        A ``list`` of :class:`Emoji` objects that make up the Content object
-    mentions : NotImplemented
-        A ``list`` of :class:`Mention` objects that make up the Content object
+    blocks : list
+        A ``list`` of :class:`Block` objects that makes up the Content object.
+        Each block represents a line in the message.
+    raw_content : str
+        The raw content string of the message. Every block (line) ends with a
+        ' \n' before the next block (line) starts.
     """
 
     __slots__ = [
@@ -33,10 +31,9 @@ class Content:
 
         self.lines = len(kwargs['blocks'])
 
-        self.blocks = [NotImplemented]  # TODO
-        self.raw_content = NotImplemented
-        self.emojis = [NotImplemented]
-        self.mentions = [NotImplemented]
+        self.blocks = [Block(**_block) for _block in kwargs.pop('blocks')]
+
+        self.raw_content = ' \n'.join(_block.text for _block in self.blocks)
 
     def __str__(self):
         return self.raw_content
