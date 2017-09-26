@@ -51,7 +51,7 @@ class Message(Object):
 
     __slots__ = [
                 'id', 'time_created', 'time_modified', 'lobby', 'author',
-                 'content', 'media_id', 'highlight_role_id', 'reactions',
+                'content', 'media_id', 'highlight_role_id', 'reactions',
     ]
 
     def __init__(self, **kwargs):

@@ -35,7 +35,7 @@ class Lobby(Object):
         Not sure if this is the special permission that the client has in this
         lobby, or something else. #TODO
     community : :class:`Community`
-        The community that this lobby is a part of
+        The ID of the community that this lobby is a part of
     """
 
     __slots__ = [
@@ -52,7 +52,7 @@ class Lobby(Object):
         self.color = kwargs.pop('color')
         self.online_members_count = kwargs.pop('online_member_count')
         self.key = kwargs.pop('subscription_key')
-        self.community = kwargs.pop('community')
+        self.community = kwargs.pop('community_id')
 
         self.permissions = [NotImplemented]  # TODO
 
